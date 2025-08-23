@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security+ Acronym Flashcards</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Security+ Acronym Flashcards</h1>
+    <p class="sub">From the CompTIA Security+ SY0-701 Acronym List</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input type="search" id="search" placeholder="Search acronyms or definitions…" />
+      <div class="toggles">
+        <label><input type="checkbox" id="shuffle"> Shuffle</label>
+        <label><input type="checkbox" id="reverse"> Show Definition First</label>
+      </div>
+      <div class="modes">
+        <button id="studyBtn" class="active">Study</button>
+        <button id="testBtn">Test</button>
+      </div>
+    </section>
+
+    <!-- Study Mode -->
+    <section id="studyMode" class="panel">
+      <div class="card" id="flashcard" tabindex="0" aria-live="polite">
+        <div class="face front" id="front"></div>
+        <div class="face back" id="back"></div>
+      </div>
+      <div class="nav">
+        <button id="prev">◀ Prev</button>
+        <div id="progress">1 / 1</div>
+        <button id="next">Next ▶</button>
+      </div>
+      <div class="quicklist" id="quicklist"></div>
+    </section>
+
+    <!-- Test Mode -->
+    <section id="testMode" class="panel hidden">
+      <div class="quiz">
+        <div class="prompt" id="quizPrompt"></div>
+        <div class="choices" id="quizChoices"></div>
+        <div class="quiz-controls">
+          <button id="quizSkip">Skip</button>
+          <button id="quizCheck">Check</button>
+        </div>
+        <div class="quiz-status" id="quizStatus"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Study deck generated from CompTIA's official objectives document. All acronyms © their respective owners.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
